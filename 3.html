@@ -71,6 +71,25 @@ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=
   	float: left;
   	 ">
     <div style="width: 100%; height: 100%; " >
+     <script>
+     
+        window.onload = function(){
+            var imgs = ['images/120.jpg','images/111.jpg','images/121.jpg','images/122.jpg','images/123.jpg',];
+            var len = imgs.length;
+            var current = 0;
+            var target = document.getElementById('target');
+            var setImg = function(){
+                target.src = imgs[current];
+                current = ++current == len ? 0: current;
+            };   
+          
+            document.getElementById('target').onclick = function(){
+                setImg();
+            }
+        };
+    </script>
+    <img width="100%" height="100%" id="target" src="images/120.jpg" >
+      <!--
      <img width="730px;" height="350px;" id="imgflag" src="images/111.jpg" onclick="changeImage()">
      <script type="text/javascript">
        function changeImage(){
@@ -83,10 +102,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=
        document.getElementById("imgflag").src="myimage[i]";
       }
       </script>
+      -->
       </div>
-     <!--
-     <img src="images/120.jpg"  id="a1" onClick="change_pic()">
-     -->
    	 </div>
   	 <div style=" width:26%;height: 350px; float:right;">
   	 	<div style="width:100%;height: 170px;background-color: white; ">
@@ -139,59 +156,49 @@ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=
   height: 80px;
   margin: 0 auto;
   ">
-  	<div style="
-  	background-image: url(images/112.jpg);
-  	background-size: 100% 100%;
-  	height: 80px;
-  	width: 32%;
-  	float: left;
-    " ></div>
-    <div style="
-  	background-image: url(images/114.jpg);
-  	background-size: 100% 100%;
-  	height: 80px;
-  	width: 32%;
-  	margin: 0 auto;
-    " ></div>
-    <div style="
-  	background-image: url(images/116.jpg);
-  	background-size: 100% 100%;
-  	height: 80px;
-  	width: 32%;
-  	float: right;
-  	position: relative;
-  	top: -80px;
-    " ></div>
-  </div>
-  <div style="width: 100%;height: 10px; "></div>
-   <div style="
-  width: 75%;
-  height: 80px;
-  margin: 0 auto;
-  ">
-  	<div style="
-  	background-image: url(images/113.jpg);
-  	background-size: 100% 100%;
-  	height: 80px;
-  	width: 32%;
-  	float: left;
-    " ></div>
-    <div style="
-  	background-image: url(images/115.jpg);
-  	background-size: 100% 100%;
-  	height: 80px;
-  	width: 32%;
-  	margin: 0 auto;
-    " ></div>
-    <div style="
-  	background-image: url(images/117.jpg);
-  	background-size: 100% 100%;
-  	height: 80px;
-  	width: 32%;
-  	float: right;
-  	position: relative;
-  	top: -80px;
-    " ></div>
+      <div style=" border: 1px solid #6983ce ;width:320px;  height: 70px; float:left;" >
+         <div style=" width: 200px; height: 70px; float:right; background-color: #6983ce;" >
+         <b>
+            <p class="styles" >PHP工程师就业班</p>
+         </b>   
+        </div>
+      </div>
+      <div style=" border: 1px solid #dd4e60 ;width:320px;  height: 70px; margin: 0 auto ;" >
+         <div style=" width: 200px; height: 70px; float:right; background-color: #dd4e60;" >
+         <b>
+            <p class="styles" >WEB大前端工程师就业班</p>
+         </b>
+         </div>
+      </div>
+      <div style=" border: 1px solid #2b9ca0 ;width:320px;  height: 70px; float: right;position: relative;top: -70px; " >
+         <div style=" width: 200px; height: 70px; float:right; background-color: #2b9ca0;" >
+         <b>         
+            <p class="styles" >UI/UE设计师就业班</p>
+         </b>   
+         </div>
+      </div>
+      <br>
+      <div style=" border: 1px solid #4caf79 ;width:320px;  height: 70px;float:left;" >
+         <div style=" width: 200px; height: 70px; float:right; background-color: #4caf79;" >
+         <b>
+            <p class="styles" >Android工程师就业班</p>
+         </b>   
+         </div>
+      </div>
+      <div style=" border: 1px solid #686f89 ;width:320px;  height: 70px; margin: auto;" >
+         <div style=" width: 200px; height: 70px; float:right; background-color: #686f89;" >
+         <b>
+            <p class="styles" >ios工程师就业班</p>
+         </b>   
+         </div>
+      </div>
+      <div style=" border: 1px solid #448fc8 ;width:320px;  height: 70px; float: right; position: relative; top:-70px;" >
+         <div style=" width: 200px; height: 70px; float:right; background-color: #448fc8;" >
+         <b>
+            <p class="styles" >Java Web工程师就业班</p>
+         </b>   
+         </div>
+      </div>
   </div>
 </div>
 <!--
@@ -210,6 +217,5 @@ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=
      </script>
 <div id="a2" onclick="tur();" ></div>
 -->
-<div style=" border: 2px solid #000000 ;width: 70px;  height: 30px;  " ></div>
 </body>
 </html>
