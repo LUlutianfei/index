@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>慕课网(仿)</title>
+	<link rel="stylesheet" type="text/css" href="imoocstyle.css">
+	<base target="_blank" />
+	<meta charset="utf-8">
+</head>
+<body style=" background-color: #e8e8e8; " >
+
+
+
+
+<div id="topAll" style=" background-color: #ffffff; z-index: 1;  height: 100%; width: 100%; position: fixed; " onclick="show()" >
+    <p id="cartoon" style=" width: 200px; height: 50px; font-size: 48px; font-family: 楷体; text-align: center;  " >欢迎来到慕课网(仿)</p>
+</div>
+<script>
+    var topAll=document.getElementById('topAll');
+	function show(){
+		topAll.style.transitionDuration = '2s'
+		topAll.style.transform = "translateY(-700px)";
+	}
+</script>
+<!--导航栏-->
+<div name="top" class=" navigationBar " >
+	<div class=" navigationBarImg ">
+	    <a href="http://www.imooc.com">
+		    <img src="images/logo.png" style=" margin: 10px 0 ; " >
+		</a>
+	</div>
+	<ul class="fontStyle1">
+		<li class="change" id="grayBg4" >
+			<a class=" noUnderline whiteColor " href="http://www.imooc.com/course/list">课程</a>
+		</li>
+		<li class="change" style=" width: 120px; " id="grayBg5" >
+			<a class=" noUnderline whiteColor " href="http://www.imooc.com/course/program">职业路径</a>
+			<i style=" position: relative; top: -10px; " >
+				<img src="images/new.png">
+			</i>
+		</li>
+		<li class="change" id="grayBg6" >
+			<a class=" noUnderline whiteColor " href="http://coding.imooc.com/">实战</a>
+		</li>
+		<li class="change" id="grayBg7" >
+			<a class=" noUnderline whiteColor " href="http://www.imooc.com/wenda">猿问</a>
+		</li>
+		<li class="change" id="grayBg8" >
+			<a class=" noUnderline whiteColor " href="http://www.imooc.com/article">手记</a>
+		</li>
+	</ul>
+	<ul class="fontStyle2" >
+		<li id="grayBg1" class="change" style=" width:80px;"  >
+			<a id="grayFont1" class=" noUnderline grayColor  "  href="order.imooc.com/pay/cart">购物车</a>
+		</li>
+		<li  id="grayBg2" class="change" >
+			<a id="grayFont2" class=" noUnderline grayColor "  href="#">登录</a>
+		</li>
+		<li id="grayBg3" class="change" >
+			<a id="grayFont3" class=" noUnderline grayColor "  href="#">注册</a>
+		</li>
+	</ul>
+	<div class="navigationBarInput" >
+		<input onclick="dis()" type="text" class="input" >
+		<a id="disappear" class=" noUnderline inputContent" href="#">react</a>
+	</div>
+</div>
+<div id="shopping" style=" z-index: 1; right: 160px; position: absolute; width: 350px; height: 410px; background-image: url(images/shopping.png); display: none; " ></div>
+<script>
+	var grayBg1=document.getElementById('grayBg1');
+	var grayBg2=document.getElementById('grayBg2');
+	var grayBg3=document.getElementById('grayBg3');
+	var grayBg4=document.getElementById('grayBg4');
+	var grayBg5=document.getElementById('grayBg5');
+	var grayBg6=document.getElementById('grayBg6');
+	var grayBg7=document.getElementById('grayBg7');
+	var grayBg8=document.getElementById('grayBg8');
+	var grayFont1=document.getElementById('grayFont1');
+	var grayFont2=document.getElementById('grayFont2');
+	var grayFont3=document.getElementById('grayFont3');
+	var shopping=document.getElementById('shopping');
+	grayBg1.onmouseover = function(){
+		grayBg1.style.backgroundColor = '#696969';
+		grayFont1.style.color = '#ffffff';
+		shopping.style.display = "block";
+		shopping.onmouseover = function(){
+			shopping.style.display = "block";
+		}
+	}
+	grayBg2.onmouseover = function(){
+		grayBg2.style.backgroundColor = '#696969';
+		grayFont2.style.color = '#ffffff';
+	}
+	grayBg3.onmouseover = function(){
+		grayBg3.style.backgroundColor = '#696969';
+		grayFont3.style.color = '#ffffff';
+	}
+	grayBg4.onmouseover = function(){
+		grayBg4.style.backgroundColor = '#696969';
+	}
+	grayBg5.onmouseover = function(){
+		grayBg5.style.backgroundColor = '#696969';
+	}
+	grayBg6.onmouseover = function(){
+		grayBg6.style.backgroundColor = '#696969';
+	}
+	grayBg7.onmouseover = function(){
+		grayBg7.style.backgroundColor = '#696969';
+	}
+	grayBg8.onmouseover = function(){
+		grayBg8.style.backgroundColor = '#696969';
+	}
+	grayBg1.onmouseout = function(){
+		grayBg1.style.backgroundColor = '#000000';
+		grayFont1.style.color = '#696969';
+		shopping.style.display = "none";
+	}
+	grayBg2.onmouseout = function(){
+		grayBg2.style.backgroundColor = '#000000';
+		grayFont2.style.color = '#696969';
+	}
+	grayBg3.onmouseout = function(){
+		grayBg3.style.backgroundColor = '#000000';
+		grayFont3.style.color = '#696969';
+	}
+	grayBg4.onmouseout = function(){
+		grayBg4.style.backgroundColor = '#000000';
+	}
+	grayBg5.onmouseout = function(){
+		grayBg5.style.backgroundColor = '#000000';
+	}
+	grayBg6.onmouseout = function(){
+		grayBg6.style.backgroundColor = '#000000';
+	}
+	grayBg7.onmouseout = function(){
+		grayBg7.style.backgroundColor = '#000000';
+	}
+	grayBg8.onmouseout = function(){
+		grayBg8.style.backgroundColor = '#000000';
+	}
+	shopping.onmouseout = function(){
+		shopping.style.display = "none";
+	}
+</script>
+<script>
+	var disappear=document.getElementById('disappear');
+	var inputs=document.getElementById('inputs');
+	  function dis(){
+		disappear.style.display = "none";
+	}
+</script>
+
+
+
+<!--图片，加入学习按钮-->
+<div class="imgBlock" >
+    <div class="imgBlock-1" >
+	    <img src="images/landp_banner.jpg" >
+	</div>
+</div>
+<div class="block1">
+	<a class="noUnderline" href="#" >
+	    <div class="block1-1" >
+	        <div class="studyButton">
+	            <p class="studyButtonPosition" id="set" >加入学习</p>
+	        </div>
+	    </div>
+	</a>
+</div>
+<script type="text/javascript">
+	var set=document.getElementById('set');
+	set.onmouseover = function(){
+		set.innerHTML="参加该路径"
+	}
+	set.onmouseout = function(){
+		set.innerHTML="加入学习"
+	}
+</script>
+
+
+
+
+
+<!--第一部分-->
+<div class="block2" >
+	<div class="block2-1" >
+		<div>
+			<h2 class="font1 fontStyleAll" >第一关 PHP基础入门</h2>
+			<h5 class="font2 fontStyleAll" >作为当今主流的开发语言，PHP集简单、免费、高效等荣誉于一身，但是，想学习她还是要脚踏实地地从基础语法开始，当然，对<br>于将来要在Web开发领域叱咤风云的你来说，跟HTML和CSS还有一些不得不说的故事。</h5>
+			<ul class="fontStyle3" >
+				<li id="all1" class="space" >
+					<a class=" noUnderline blackColor " href="http://www.imooc.com/learn/54">
+						<div style="overflow: hidden;">
+							<img class="imgStyle" id="img1" src="images/53daee770001dd0706000338-300-170.jpg">
+						</div>
+						<br>
+						<p class="lineFeed" id="font1">PHP入门篇</p>
+					</a>
+				</li>
+				<li id="all2" class="space">
+					<a class=" noUnderline blackColor " href="http://www.imooc.com/learn/26">
+						<div style="overflow: hidden;">
+							<img class="imgStyle" id="img2" src="images/572b06470001a42e06000338-300-170.jpg">
+						</div>
+						<br>
+						<p class="lineFeed" id="font2" >PHP进阶篇</p>
+					</a>
+				</li>
+				<li id="all3" class="space">
+					<a class=" noUnderline blackColor " href="http://www.imooc.com/learn/9">
+						<div style="overflow: hidden;">
+							<img class="imgStyle" id="img3" src="images/529dc3380001379906000338-300-170.jpg">
+						</div>
+						<br>
+						<p class="lineFeed" id="font3" >HTML+CSS基础课程</p>
+					</a>
+				</li>
+			</ul>
+			<div>
+				<img class="triangle1" src="images/dot_program_arrow.png">
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var font1=document.getElementById('font1');
+	var font2=document.getElementById('font2');
+	var font3=document.getElementById('font3');
+	all1.onmouseover = function(){
+	    font1.style.transitionDuration = '1s';
+		font1.innerHTML = "轻松帮你快速掌握PHP语言基础知识"
+		font1.style.fontSize=10+'px';
+		s("img1");
+	}
+	all2.onmouseover = function(){
+		font2.style.transitionDuration = '1s';
+		font2.innerHTML = "轻松学习PHP中级课程，进行全面了解"
+		font2.style.fontSize=10+'px';
+		s('img2');
+	}
+	all3.onmouseover = function(){
+		font3.style.transitionDuration = '1s';
+		font3.innerHTML = "HTML+CSS基础教程8小时带领大家步步深入学习标签用法和意义"
+		font3.style.fontSize=10+'px';
+		s('img3');
+	}
+	all1.onmouseout = function(){
+		font1.style.transitionDuration = '1s';
+		font1.innerHTML = "PHP入门篇"
+		font1.style.fontSize=16+'px';
+		font1.style.transform = "1s";
+		f('img1');
+	}
+	all2.onmouseout = function(){
+		font2.style.transitionDuration = '1s';
+		font2.innerHTML = "PHP进阶篇"
+		font2.style.fontSize=16+'px';
+		f('img2');
+	}
+	all3.onmouseout = function(){
+		font3.style.transitionDuration = '1s';
+		font3.innerHTML = "HTML+CSS基础课程"
+		font3.style.fontSize=16+'px';
+		f('img3');
+	}
+	function s (i){
+		var xx = document.getElementById(i);
+		xx.style.animationName = "movea";
+		xx.style.animationDuration = "1s";
+		xx.style.transform = "scale(1.1,1.1)";
+	}
+	function f (i){
+		var xx = document.getElementById(i);
+	    xx.style.animationName = "moveb";
+		xx.style.animationDuration = "1s";
+		xx.style.transform = "scale(1,1)";
+	}
+</script>
+
+
+
+
+
+<!--第二部分-->
+<div class="block3" >
+	<div class="block3-1" >
+		<div>
+			<h2 class="font1 fontStyleAll" >第二关 PHP基础应用</h2>
+			<h5 class="font2 fontStyleAll" >web开发与数据库息息相关，接下来一起来学习MySQL数据库的基础知识，与此同时，我们还会把php的基础知识结合起来做几个<br>实用的小案例，掌握了这些知识之后，下一步小伙伴们就可以做出一个有数据交互的网站了，是不是很神奇呢？</h5>
+			<ul class="fontStyle4" >
+				<li id="all4" class="space" >
+					<a class=" noUnderline blackColor " href="#">
+						<div style="overflow: hidden;">
+							<img class="imgStyle" id="img4" src="images/572b0752000142ef06000338-300-170.jpg">
+						</div>
+						<br>
+						<p class="lineFeed" id="font4" >WEB在线文件管理器</p>
+					</a>
+				</li>
+				<li id="all5" class="space">
+					<a class=" noUnderline blackColor " href="#">
+						<div style="overflow: hidden;">
+							<img class="imgStyle" id="img5" src="images/5387e32e000196cb06000338-300-170.jpg">
+						</div>
+						<br>
+						<p class="lineFeed" id="font5" >PHP与MySQL关系大揭秘</p>
+					</a>
+				</li>
+				<li id="all6" class="space">
+					<a class=" noUnderline blackColor " href="#">
+						<div style="overflow: hidden;">
+							<img class="imgStyle" id="img6" src="images/5707623f0001f96006000338-300-170.jpg">
+						</div>
+						<br>
+						<p class="lineFeed" id="font6" >PHP实现验证码制作</p>
+					</a>
+				</li>
+				<li style=" position: relative; left: 300px; "  id="all7" class="space">
+					<a class=" noUnderline blackColor " href="#">
+						<div style="overflow: hidden;">
+							<img class="imgStyle" id="img7" src="images/572b067f00019abf06000338-300-170.jpg">
+						</div>
+						<br>
+						<p class="lineFeed" id="font7" >PHP面对对象编程</p>
+					</a>
+				</li>
+			</ul>
+			<div>
+				<img class="triangle2" src="images/dot_program_arrow.png">
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var font4=document.getElementById('font4');
+	var font5=document.getElementById('font5');
+	var font6=document.getElementById('font6');
+	var font7=document.getElementById('font7');
+	all4.onmouseover = function(){
+		font4.style.transitionDuration = '1s';
+		font4.innerHTML = "教你掌握文件、目录函数库的应用"
+		font4.style.fontSize = 10+'px';
+		s('img4');
+	}
+	all5.onmouseover = function(){
+		font5.style.transitionDuration = '1s';
+		font5.innerHTML = "让我们一起走上探秘之旅，找寻php和mysql恋爱的真谛"
+		font5.style.fontSize = 10+'px';
+		s('img5');
+	}
+	all6.onmouseover = function(){
+		font6.style.transitionDuration = '1s';
+		font6.innerHTML = "各种形态验证码核心原理与实现技巧"
+		font6.style.fontSize = 10+'px';
+		s('img6');
+	}
+	all7.onmouseover = function(){
+		font7.style.transitionDuration = '1s';
+		font7.innerHTML = "从容应对面试官的知识宝典"
+		font7.style.fontSize = 10+'px';
+		s('img7');
+	}
+	all4.onmouseout = function(){
+		font4.style.transitionDuration = '1s';
+		font4.innerHTML = "WEB在线文件管理器"
+		font4.style.fontSize = 16+'px';
+		f('img4');
+	}
+	all5.onmouseout = function(){
+		font5.style.transitionDuration = '1s';
+		font5.innerHTML = "PHP与MySQL关系大揭秘"
+		font5.style.fontSize = 16+'px';
+		f('img5');
+	}
+	all6.onmouseout = function(){
+		font6.style.transitionDuration = '1s';
+		font6.innerHTML = "PHP实现验证码制作"
+		font6.style.fontSize = 16+'px';
+		f('img6');
+	}
+	all7.onmouseout = function(){
+		font7.style.transitionDuration = '1s';
+		font7.innerHTML = "PHP面对对象编程"
+		font7.style.fontSize = 16+'px';
+		f('img7');
+	}
+</script>
+
+
+
+
+<!--第三部分-->
+<div class="block2" >
+	<div class="block2-1" >
+		<div>
+			<h2 class="font1 fontStyleAll" >第三关 PHP应用进阶</h2>
+			<h5 class="font2 fontStyleAll" >在这关小伙伴们将掌握基本的WEB开发思路和技巧以及MVC设计模式！为通往PHP大师的道路奠定了坚实的基础！</h5>
+			<ul class="fontStyle5" >
+				<li id="all8" class="space" >
+					<a class=" noUnderline blackColor " href="#">
+						<div style="overflow: hidden;">
+							<img class="imgStyle" id="img8" src="images/53daee770001dd0706000338-300-170.jpg">
+						</div>
+						<br>
+						<p class="lineFeed" id="font8" >JSON应用场景与实战</p>
+					</a>
+				</li>
+				<li id="all9" class="space">
+					<a class=" noUnderline blackColor " href="#">
+						<div style="overflow: hidden;">
+							<img class="imgStyle" id="img9" src="images/572b06470001a42e06000338-300-170.jpg">
+						</div>
+						<br>
+						<p class="lineFeed" id="font9" >手把手教你实现电商网站后台开发</p>
+					</a>
+				</li>
+				<li id="all10" class="space">
+					<a class=" noUnderline blackColor " href="#">
+						<div style="overflow: hidden;">
+							<img class="imgStyle" id="img10" src="images/529dc3380001379906000338-300-170.jpg">
+						</div>
+						<br>
+						<p class="lineFeed" id="font10" >MVC架构模式分析与设计</p>
+					</a>
+				</li>
+			</ul>
+			<div>
+				<img class="triangle3" src="images/dot_program_arrow.png">
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var font8=document.getElementById('font8');
+	var font9=document.getElementById('font9');
+	var font10=document.getElementById('font10');
+	all8.onmouseover = function(){
+	    font8.style.transitionDuration = '1s';	
+		font8.innerHTML = "轻松帮你快速掌握PHP语言基础知识"
+		font8.style.fontSize=10+'px';
+		s('img8');
+	}
+	all9.onmouseover = function(){
+		font9.style.transitionDuration = '1s';
+		font9.innerHTML = "轻松学习PHP中级课程，进行全面了解"
+		font9.style.fontSize=10+'px';
+		s('img9');
+	}
+	all10.onmouseover = function(){
+		font10.style.transitionDuration = '1s';
+		font10.innerHTML = "HTML+CSS基础教程8小时带领大家步步深入学习标签用法和意义"
+		font10.style.fontSize=10+'px';
+		s('img10');
+	}
+	all8.onmouseout = function(){
+		font8.style.transitionDuration = '1s';
+		font8.innerHTML = "PHP入门篇"
+		font8.style.fontSize=16+'px';
+		f('img8');
+	}
+	all9.onmouseout = function(){
+		font9.style.transitionDuration = '1s';
+		font9.innerHTML = "PHP进阶篇"
+		font9.style.fontSize=16+'px';
+		f('img9');
+	}
+	all10.onmouseout = function(){
+		font10.style.transitionDuration = '1s';
+		font10.innerHTML = "HTML+CSS基础课程"
+		font10.style.fontSize=16+'px';
+		f('img10');
+	}
+</script>
+
+
+
+
+<!--第四部分-->
+<div class="block4" >
+	<div class="block4-1" >
+	<div class=" block4-2 " >
+		<img class="block4Img" src="images/dot_program_end.png">
+		</div>
+	</div>
+</div>
+
+
+
+
+<!--底部导航栏-->
+<div class="block5" >
+	<div class="block5-1" >
+		<div class="fontStyle6" >
+			<ul>
+				<li class="block5Font" >
+					<p>网站首页</p>
+				</li>
+				<li class="block5Font" >
+					<p>企业合作</p>
+				</li>
+				<li class="block5Font" >
+					<p>人才招聘</p>
+				</li>
+				<li class="block5Font" >
+					<p>联系我们</p>
+				</li>
+				<li class="block5Font" >
+					<p>讲师招募</p>
+				</li>
+				<li class="block5Font" >
+					<p>常见问题</p>
+				</li>
+				<li class="block5Font" >
+					<p>意见反馈</p>
+				</li>
+				<li class="block5Font" >
+					<p>慕课大学</p>
+				</li>
+				<li class="block5Font" >
+					<p>友情链接</p>
+				</li>
+			</ul>
+			<p class="block5Font" >Copyright © 2017 imooc.com All Rights Reserved | 京ICP备 13046642号-2</p>
+		</div>
+		<div class="block5-2" >
+		    <a href="#">
+			    <img src="images/weixin.png">
+		    </a>
+		    <a href="#">
+		    	<img src="images/weibo.png">
+		    </a>
+		    <a href="#">
+		    	<img src="images/qq.png">
+		    </a>		
+		</div>
+	</div>
+</div>
+
+
+
+<!--右侧导航栏-->
+<div class="block6" >
+    <div style="  width: 20px; margin: 0 auto; " >
+        <a href="#">
+	        <img class="block6Img" id="block6Img1"  src="images/right1.png">
+        </a>
+        <a href="#">
+    	    <img class="block6Img" id="block6Img2" src="images/right2.png">
+        </a>
+        <a href="#">
+    	    <img id="block6Img3" style=" margin: 20px 0 20px 4px; " src="images/right3.png">
+        </a>
+        <a href="#">
+    	    <img class="block6Img" id="block6Img4" src="images/right4.png">
+        </a>
+    </div>
+    <div class="block6-top" id="ldis" >
+        <div style=" margin: 0 auto; width: 20px; " >
+            <a href="#top" target="_self"  >
+    	        <img class="block6Img" id="block6Img5" src="images/right5.png">
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+	var ldis=document.getElementById('ldis');	
+    window.onscroll = function () {
+        var winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            if (winScroll >= (document.body.offsetHeight - document.documentElement.clientHeight*3)) {
+                ldis.style.display = "block";
+            }
+            else{
+          	    ldis.style.display = "none";
+            }
+    }
+</script>
+</body>
+</html>
